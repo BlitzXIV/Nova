@@ -28,7 +28,7 @@ export const sendMessage = async(req,res) => {
         if(newMessage){
             conversation.messages.push(newMessage.id)
         }
-        res.status(201).json(newMessage)
+        res.status(201).json(newMessage._id);
 
     } catch (error) {
         console.log("Error in sendMessage controller: ", error.message)
