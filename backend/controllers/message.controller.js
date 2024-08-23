@@ -21,14 +21,14 @@ export const sendMessage = async(req,res) => {
         
         const newMessage = new Message ({
             senderId,
-            recieverId,
+            receiverId,
             message,
         })
         //push msg into convo array
         if(newMessage){
             conversation.messages.push(newMessage.id)
         }
-        res.status(201).json(newMessage._id);
+        res.status(201).json(newMessage);
 
     } catch (error) {
         console.log("Error in sendMessage controller: ", error.message)
