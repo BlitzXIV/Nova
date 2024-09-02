@@ -9,7 +9,7 @@ const Login = () => {
 	const {loading, login} = useLogin()
 	const handleSubmit = async (e) => {
 		e.preventDefault()
-		await login({username, password})
+		await login(username, password)
 	}
 
 	return (
