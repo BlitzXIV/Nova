@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { userAuthContext } from "../context/AuthContext"
+import { useAuthContext } from "../context/AuthContext"
 
 const useLogout = () => {
   const [loading, setLoading] = useState(false)
-  const {setAuthUser} = userAuthContext() 
+  const {setAuthUser} = useAuthContext() 
 
   const logout = async () => {
     setLoading(true)
