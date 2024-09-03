@@ -31,7 +31,7 @@ const MessageContainer = () => {
 		</div>
 	);
 };
-
+export default MessageContainer;
 
 const NoChatSelected = () => {
 	const {authUser} = useAuthContext()
@@ -46,4 +46,3 @@ const NoChatSelected = () => {
 	);
 };
 
-export default MessageContainer;
