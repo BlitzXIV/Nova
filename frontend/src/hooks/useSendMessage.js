@@ -19,6 +19,10 @@ const useSendMessage = () => {
                 throw new Error(data.error)
             }
 
+            if(message.length > 250){
+               return toast.error("Message is too long (max 250 characters)")
+            }
+
             setMessages([...messages, data])
         } catch (error) {
             toast.error(error.message)
