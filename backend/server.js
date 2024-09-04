@@ -2,6 +2,7 @@
 import express from "express"
 import dotenv from "dotenv"
 import cookieParser from "cookie-parser"
+import bodyParser from "body-parser"
 
 import path from "path"
 import authRoutes from "./routes/auth.routes.js"
@@ -18,6 +19,7 @@ dotenv.config()
 
 app.use(express.json()) // parse incoming req's w JSON payloads (from req.body)
 app.use(cookieParser())
+app.use(bodyParser.json())
 
 
 app.use("/api/auth", authRoutes)
