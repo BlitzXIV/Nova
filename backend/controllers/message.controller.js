@@ -26,7 +26,7 @@ export const sendMessage = async(req,res) => {
             message,
         })
         //push msg into convo array
-        if(newMessage){
+        if(newMessage && message.length < 250 ){
             conversation.messages.push(newMessage._id)
         }
          // /* await conversation.save()  // <-- these 2 awaits will run separately
